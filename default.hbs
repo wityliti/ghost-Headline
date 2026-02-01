@@ -5,107 +5,277 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>{{meta_title}}</title>
-    <link rel="stylesheet" href="{{asset "built/screen.css"}}">
+    <link rel="stylesheet" href="{{asset " built/screen.css"}}">
 
     {{ghost_head}}
 </head>
 
-<body class="{{body_class}}{{{block "body_class"}}} is-head-{{#match @custom.navigation_layout "Logo on the left"}}left-logo{{else match @custom.navigation_layout "Logo in the middle"}}middle-logo{{else}}stacked{{/match}}{{#match @custom.title_font "=" "Elegant serif"}} has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif"}} has-serif-body{{/match}}{{#is "tag"}}{{#if tag.feature_image}} is-head-transparent{{/if}}{{/is}}{{#match @custom.header_style "Accent color"}} is-head-brand{{/match}}{{#match @custom.header_style "Dark"}} is-head-dark{{/match}}">
-<div class="gh-site">
+<body class="{{body_class}}{{{block " body_class"}}}{{#match @custom.title_font "=" "Elegant serif" }}
+    has-serif-title{{/match}}{{#match @custom.body_font "=" "Elegant serif" }} has-serif-body{{/match}}">
+    <div class="gh-site">
 
-    <header id="gh-head" class="gh-head gh-outer">
-        <div class="gh-head-inner gh-inner">
-            <div class="gh-head-brand">
-                <div class="gh-head-brand-wrapper">
-                    {{#is "home"}}<h1 class="gh-head-logo">{{/is}}
-                    <a {{^is "home"}}class="gh-head-logo"{{/is}} href="{{@site.url}}">
-                        {{#if @site.logo}}
-                            <img src="{{@site.logo}}" alt="{{@site.title}}">
-                            {{#if @custom.white_publication_logo_for_transparent_header}}
-                                <img src="{{@custom.white_publication_logo_for_transparent_header}}" alt="{{@site.title}}">
-                            {{/if}}
-                        {{else}}
-                            {{@site.title}}
-                        {{/if}}
-                    </a>
-                    {{#is "home"}}</h1>{{/is}}
-                </div>
-                <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
-                <button class="gh-burger" aria-label="Toggle menu"></button>
-            </div>
 
-            <nav class="gh-head-menu">
-                {{navigation}}
-                {{#unless @site.members_enabled}}
-                    {{#match @custom.navigation_layout "Stacked"}}
-                        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
-                    {{/match}}
-                {{/unless}}
-            </nav>
 
-            <div class="gh-head-actions">
-                {{#unless @site.members_enabled}}
-                    {{^match @custom.navigation_layout "Stacked"}}
-                        <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
-                    {{/match}}
-                {{else}}
-                    <button class="gh-search gh-icon-btn" aria-label="Search this site" data-ghost-search>{{> "icons/search"}}</button>
-                    <div class="gh-head-members">
-                        {{#unless @member}}
-                            {{#unless @site.members_invite_only}}
-                                <a class="gh-head-link" href="#/portal/signin" data-portal="signin">Sign in</a>
-                                <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signup" data-portal="signup">Subscribe</a>
-                            {{else}}
-                                <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/signin" data-portal="signin">Sign in</a>
-                            {{/unless}}
-                        {{else}}
-                            <a class="gh-head-btn gh-btn gh-primary-btn" href="#/portal/account" data-portal="account">Account</a>
-                        {{/unless}}
+        <!-- Afforestation Header -->
+        <header id="gh-head" class="aff-header">
+            <div class="aff-header-container">
+                <div class="aff-header-inner">
+                    <!-- Logo -->
+                    <div class="aff-brand">
+                        <a href="https://afforestation.org" class="aff-logo-link">
+                            <img src="https://www.afforestation.org/images/logo-transparent.png"
+                                alt="Afforestation.org Logo" class="aff-logo-img">
+                            <span class="aff-logo-text">afforestation.org</span>
+                        </a>
                     </div>
-                {{/unless}}
+
+                    <!-- Desktop Navigation -->
+                    <nav class="aff-nav-desktop">
+                        <!-- Business Solutions Dropdown -->
+                        <div class="aff-dropdown">
+                            <button class="aff-nav-link aff-dropdown-toggle">
+                                Business Solutions
+                                <svg class="aff-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </button>
+                            <div class="aff-dropdown-menu">
+                                <a href="https://afforestation.org/for-business" class="aff-dropdown-item">For
+                                    Businesses</a>
+                                <a href="https://afforestation.org/for-business#small-midsize"
+                                    class="aff-dropdown-item">Small-Midsize</a>
+                                <a href="https://afforestation.org/enterprise" class="aff-dropdown-item">Enterprise</a>
+                                <a href="https://afforestation.org/ecommerce-integrations"
+                                    class="aff-dropdown-item">E-commerce Integration</a>
+                                <a href="https://afforestation.org/white-label-api" class="aff-dropdown-item">API
+                                    Solutions</a>
+                                <a href="https://afforestation.org/nature-bank" class="aff-dropdown-item">Nature Bank
+                                    <span class="aff-tag">New</span></a>
+                                <a href="https://afforestation.org/services/urban-farming"
+                                    class="aff-dropdown-item">Urban Farming & Landscaping <span
+                                        class="aff-tag">New</span></a>
+                            </div>
+                        </div>
+
+                        <!-- For Individuals Dropdown -->
+                        <div class="aff-dropdown">
+                            <button class="aff-nav-link aff-dropdown-toggle">
+                                For Individuals
+                                <svg class="aff-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                                    stroke="currentColor" stroke-width="2">
+                                    <path d="M6 9l6 6 6-6" />
+                                </svg>
+                            </button>
+                            <div class="aff-dropdown-menu">
+                                <a href="https://afforestation.org/carbon-calculator" class="aff-dropdown-item">Carbon
+                                    Calculator</a>
+                                <a href="https://afforestation.org/plant" class="aff-dropdown-item">Plant Trees</a>
+                                <a href="https://afforestation.org/impact" class="aff-dropdown-item">Track Impact</a>
+                                <a href="https://afforestation.org/growcoin" class="aff-dropdown-item">GrowCoin</a>
+                                <a href="https://afforestation.org/services/urban-farming"
+                                    class="aff-dropdown-item">Urban Farming & Landscaping</a>
+                            </div>
+                        </div>
+
+                        <!-- Direct Links -->
+                        <a href="https://afforestation.org/grow-app" class="aff-nav-link">Grow App</a>
+                        <a href="https://afforestation.org/about" class="aff-nav-link">About Us</a>
+                        <a href="https://afforestation.org/contact" class="aff-nav-link">Contact</a>
+                        <a href="{{@site.url}}" class="aff-nav-link aff-nav-blog-active">Blog</a>
+                    </nav>
+
+                    <!-- Action Buttons -->
+                    <div class="aff-actions">
+                        <button class="gh-search aff-search-btn" aria-label="Search this site" data-ghost-search>
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="M21 21l-4.35-4.35" />
+                            </svg>
+                        </button>
+                        <a href="https://afforestation.org/auth/signin" class="aff-btn-ghost">Sign In</a>
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button class="aff-mobile-toggle" aria-label="Toggle menu">
+                        <svg class="aff-menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M3 12h18M3 6h18M3 18h18" />
+                        </svg>
+                        <svg class="aff-close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2">
+                            <path d="M18 6L6 18M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
             </div>
-        </div>
-    </header>
 
-    {{{body}}}
+            <!-- Mobile Navigation -->
+            <div class="aff-mobile-menu">
+                <div class="aff-mobile-menu-inner">
+                    <!-- Business Solutions -->
+                    <div class="aff-mobile-section">
+                        <h3 class="aff-mobile-section-title">Business Solutions</h3>
+                        <a href="https://afforestation.org/for-business" class="aff-mobile-link">For Businesses</a>
+                        <a href="https://afforestation.org/for-business#small-midsize"
+                            class="aff-mobile-link">Small-Midsize</a>
+                        <a href="https://afforestation.org/enterprise" class="aff-mobile-link">Enterprise</a>
+                        <a href="https://afforestation.org/ecommerce-integrations" class="aff-mobile-link">E-commerce
+                            Integration</a>
+                        <a href="https://afforestation.org/white-label-api" class="aff-mobile-link">API Solutions</a>
+                        <a href="https://afforestation.org/nature-bank" class="aff-mobile-link">Nature Bank <span
+                                class="aff-tag">New</span></a>
+                        <a href="https://afforestation.org/services/urban-farming" class="aff-mobile-link">Urban Farming
+                            & Landscaping <span class="aff-tag">New</span></a>
+                    </div>
 
-    <footer class="gh-foot gh-outer">
-        <div class="gh-foot-inner gh-inner">
-            {{#if @site.members_enabled}}
-            {{#unless @member}}
-                <section class="gh-subscribe">
-                    <h3 class="gh-subscribe-title">Subscribe to {{@site.title}}</h3>
-                    {{#if @custom.email_signup_text}}
-                        <div class="gh-subscribe-description">{{@custom.email_signup_text}}</div>
-                    {{/if}}
-                    <button class="gh-subscribe-btn gh-btn" data-portal="signup">{{> "icons/email"}} Subscribe now</button>
-                </section>
-            {{/unless}}
-            {{/if}}
+                    <!-- For Individuals -->
+                    <div class="aff-mobile-section">
+                        <h3 class="aff-mobile-section-title">For Individuals</h3>
+                        <a href="https://afforestation.org/carbon-calculator" class="aff-mobile-link">Carbon
+                            Calculator</a>
+                        <a href="https://afforestation.org/plant" class="aff-mobile-link">Plant Trees</a>
+                        <a href="https://afforestation.org/impact" class="aff-mobile-link">Track Impact</a>
+                        <a href="https://afforestation.org/growcoin" class="aff-mobile-link">GrowCoin</a>
+                        <a href="https://afforestation.org/services/urban-farming" class="aff-mobile-link">Urban Farming
+                            & Landscaping</a>
+                    </div>
 
-            <nav class="gh-foot-menu">
-                {{navigation type="secondary"}}
-            </nav>
+                    <!-- Other Links -->
+                    <div class="aff-mobile-section aff-mobile-links">
+                        <a href="https://afforestation.org/grow-app" class="aff-mobile-nav-link">Grow App</a>
+                        <a href="https://afforestation.org/about" class="aff-mobile-nav-link">About Us</a>
+                        <a href="https://afforestation.org/contact" class="aff-mobile-nav-link">Contact</a>
+                        <a href="{{@site.url}}" class="aff-mobile-nav-link aff-nav-blog-active">Blog</a>
+                    </div>
 
-            <div class="gh-copyright">
-                {{#unless @custom.footer_text}}
-                    {{@site.title}} © {{date format="YYYY"}}. Powered by <a href="https://ghost.org/" target="_blank" rel="noopener">Ghost</a>
-                {{else}}
-                    {{@custom.footer_text}}
-                {{/unless}}
+                    <!-- Mobile Actions -->
+                    <div class="aff-mobile-actions">
+                        <a href="https://afforestation.org/carbon-credits" class="aff-btn-primary aff-btn-full">Offset
+                            Now</a>
+                        <a href="https://afforestation.org/auth/signin" class="aff-btn-outline aff-btn-full">Sign In</a>
+                    </div>
+                </div>
             </div>
-        </div>
-    </footer>
+        </header>
 
-</div>
+        {{{body}}}
 
-{{#is "post, page"}}
+        <!-- Afforestation Footer -->
+        <footer class="aff-footer">
+            <div class="aff-footer-inner">
+                <div class="aff-footer-grid">
+                    <!-- Brand Section -->
+                    <div class="aff-footer-brand">
+                        <div class="aff-footer-logo">
+                            <img src="https://www.afforestation.org/images/logo-transparent.png"
+                                alt="Afforestation.org Logo" width="32" height="32">
+                            <span>afforestation.org</span>
+                        </div>
+                        <p class="aff-footer-tagline">
+                            Leading the global movement to restore forests and combat climate change through innovative
+                            technology and community-driven initiatives.
+                        </p>
+                        <div class="aff-social-links">
+                            <a href="#" class="aff-social-link" aria-label="Facebook">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="aff-social-link" aria-label="Twitter">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
+                                </svg>
+                            </a>
+                            <a href="#" class="aff-social-link" aria-label="Instagram">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+                                    <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+                                    <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+                                </svg>
+                            </a>
+                            <a href="#" class="aff-social-link" aria-label="LinkedIn">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect x="2" y="9" width="4" height="12" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Quick Links -->
+                    <div class="aff-footer-links">
+                        <h3 class="aff-footer-heading">Quick Links</h3>
+                        <ul class="aff-footer-list">
+                            <li><a href="https://afforestation.org/grow-app">Grow App</a></li>
+                            <li><a href="https://afforestation.org/seed-revolution">Seed Revolution</a></li>
+                            <li><a href="https://afforestation.org/for-business">For Business</a></li>
+                            <li><a href="https://afforestation.org/dashboard">Impact</a></li>
+                            <li><a href="https://afforestation.org/about">About</a></li>
+                            <li><a href="{{@site.url}}">Blog</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="aff-footer-contact">
+                        <h3 class="aff-footer-heading">Contact</h3>
+                        <ul class="aff-footer-list aff-contact-list">
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e"
+                                    stroke-width="2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                                <span>admin@afforestation.org</span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e"
+                                    stroke-width="2">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                                <span>+91 8768777710</span>
+                            </li>
+                            <li>
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#22c55e"
+                                    stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                    <circle cx="12" cy="10" r="3" />
+                                </svg>
+                                <span>Whitefield, Bangalore</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Bottom Bar -->
+                <div class="aff-footer-bottom">
+                    <p class="aff-copyright">© {{date format="YYYY"}} Afforestation.org. All rights reserved.</p>
+                    <div class="aff-footer-legal">
+                        <a href="https://afforestation.org/privacy">Privacy Policy</a>
+                        <a href="https://afforestation.org/terms">Terms of Service</a>
+                        <a href="https://afforestation.org/cookies">Cookie Policy</a>
+                        <a href="https://afforestation.org/contact">Support</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+
+    {{#is "post, page"}}
     {{> "pswp"}}
-{{/is}}
+    {{/is}}
 
-<script src="{{asset "built/main.min.js"}}"></script>
+    <script src="{{asset " built/main.min.js"}}"></script>
 
-{{ghost_foot}}
+    {{ghost_foot}}
 
 </body>
 
