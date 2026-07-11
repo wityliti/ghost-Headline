@@ -941,7 +941,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     align-items: center;
     justify-content: space-between;
     height: 72px;
-    max-width: 80rem;
+    max-width: 1280px;
     margin: 0 auto;
     padding: 0 24px;
 }
@@ -962,7 +962,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 }
 
 .aff-logo-text {
-    font-size: 1.125rem;
+    font-size: 18px;
     font-weight: 600;
     color: #134D40;
     letter-spacing: -0.025em;
@@ -986,7 +986,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     display: flex;
     align-items: center;
     padding: 8px 0;
-    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: 600;
     color: #134D40;
     text-decoration: none;
@@ -1038,7 +1038,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     align-items: flex-start;
     height: 328px;
     width: 893px;
-    max-width: calc(100vw - 3rem);
+    max-width: calc(100vw - 48px);
     gap: 10px;
     padding: 32px;
     background: #fff;
@@ -1089,7 +1089,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     align-items: center;
     gap: 8px;
     font-family: inherit;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 400;
     line-height: 1.5;
     letter-spacing: -0.015em;
@@ -1149,7 +1149,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 }
 
 .aff-btn-login {
-    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: 600;
     color: #134D40;
     text-decoration: none;
@@ -1165,7 +1165,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
     align-items: center;
     justify-content: center;
     padding: 10px 24px;
-    font-size: 0.875rem;
+    font-size: 14px;
     font-weight: 600;
     color: #134D40;
     background: transparent;
@@ -1248,7 +1248,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 
 .aff-mobile-section-title {
     margin: 0 0 8px;
-    font-size: 0.75rem;
+    font-size: 12px;
     font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 0.18em;
@@ -1258,7 +1258,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 .aff-mobile-link {
     display: block;
     padding: 8px 4px;
-    font-size: 0.9375rem;
+    font-size: 15px;
     color: #065C43;
     text-decoration: none;
 }
@@ -1270,7 +1270,7 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 .aff-mobile-nav-link {
     display: block;
     padding: 8px 0;
-    font-size: 1rem;
+    font-size: 16px;
     font-weight: 600;
     color: #134D40;
     text-decoration: none;
