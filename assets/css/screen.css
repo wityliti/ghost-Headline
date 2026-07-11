@@ -1469,11 +1469,11 @@ body:not(.home-template) .gh-topic-grid .gh-card {
 
 /* Adjust main content padding for fixed header */
 .gh-main {
-    padding-top: 72px;
+    padding-top: 112px;
 }
 
 @media (max-width: 767px) {
     .gh-main {
-        padding-top: 72px;
+        padding-top: 104px;
     }
 }
