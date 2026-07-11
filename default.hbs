@@ -18,143 +18,191 @@
 
         <!-- Afforestation Header -->
         <header id="gh-head" class="aff-header">
-            <div class="aff-header-container">
-                <div class="aff-header-inner">
-                    <!-- Logo -->
-                    <div class="aff-brand">
-                        <a href="https://afforestation.org" class="aff-logo-link">
-                            <img src="https://www.afforestation.org/images/logo-transparent.png"
-                                alt="Afforestation.org Logo" class="aff-logo-img">
-                            <span class="aff-logo-text">afforestation.org</span>
-                        </a>
-                    </div>
+            <div class="aff-header-inner">
+                <a href="https://afforestation.org" class="aff-logo-link">
+                    <img src="https://www.afforestation.org/images/logo-transparent.png"
+                        alt="Afforestation" class="aff-logo-img" width="40" height="40">
+                    <span class="aff-logo-text">afforestation.org</span>
+                </a>
 
-                    <!-- Desktop Navigation -->
-                    <nav class="aff-nav-desktop">
-                        <!-- Business Solutions Dropdown -->
-                        <div class="aff-dropdown">
-                            <button class="aff-nav-link aff-dropdown-toggle">
-                                Business Solutions
-                                <svg class="aff-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path d="M6 9l6 6 6-6" />
-                                </svg>
-                            </button>
-                            <div class="aff-dropdown-menu">
-                                <a href="https://afforestation.org/for-business" class="aff-dropdown-item">For
-                                    Businesses</a>
-                                <a href="https://afforestation.org/for-business#small-midsize"
-                                    class="aff-dropdown-item">Small-Midsize</a>
-                                <a href="https://afforestation.org/enterprise" class="aff-dropdown-item">Enterprise</a>
-                                <a href="https://afforestation.org/ecommerce-integrations"
-                                    class="aff-dropdown-item">E-commerce Integration</a>
-                                <a href="https://afforestation.org/white-label-api" class="aff-dropdown-item">API
-                                    Solutions</a>
-                                <a href="https://afforestation.org/nature-bank" class="aff-dropdown-item">Nature Bank
-                                    <span class="aff-tag">New</span></a>
-                                <a href="https://afforestation.org/services/urban-farming"
-                                    class="aff-dropdown-item">Urban Farming & Landscaping <span
-                                        class="aff-tag">New</span></a>
+                <nav class="aff-nav-desktop" aria-label="Primary">
+                    <!-- Solutions mega menu -->
+                    <div class="aff-mega" data-mega="solutions">
+                        <button type="button" class="aff-nav-link aff-mega-toggle">Solutions</button>
+                        <div class="aff-mega-panel aff-mega-panel--solutions">
+                            <div class="aff-mega-panel-inner">
+                                <div class="aff-mega-cols">
+                                    <ul class="aff-mega-col">
+                                        <li>
+                                            <a href="https://afforestation.org/for-business" class="aff-mega-link">
+                                                <svg class="aff-mega-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 22V4a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v18Z"/><path d="M6 12H4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h2"/><path d="M18 9h2a2 2 0 0 1 2 2v9a2 2 0 0 1-2 2h-2"/><path d="M10 6h4"/><path d="M10 10h4"/><path d="M10 14h4"/><path d="M10 18h4"/></svg>
+                                                <span>For Businesses</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://afforestation.org/for-business/growcoin" class="aff-mega-link">
+                                                <svg class="aff-mega-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><circle cx="8" cy="8" r="6"/><path d="M18.09 10.37A6 6 0 1 1 10.34 18"/><path d="M7 6h1v4"/><path d="m16.71 13.88.7.71-2.82 2.82"/></svg>
+                                                <span>GrowCoin for Business</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://afforestation.org/ecommerce-integrations" class="aff-mega-link">
+                                                <svg class="aff-mega-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+                                                <span>E-commerce Integration</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://afforestation.org/carbon-counter" class="aff-mega-link">
+                                                <svg class="aff-mega-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m7.5 4.27 9 5.15"/><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg>
+                                                <span>Carbon counter logistic</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://afforestation.org/nature-bank" class="aff-mega-link">
+                                                <svg class="aff-mega-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 18v-7"/><path d="M11.12 2.198a2 2 0 0 1 1.76.006l7.866 3.847a2 2 0 0 1-.002 3.605L12.88 13.8a2 2 0 0 1-1.76-.006L3.254 9.656a2 2 0 0 1 .002-3.605z"/><path d="M14 18v-7"/><path d="M18 22V11.35"/><path d="M6 22V9.35"/></svg>
+                                                <span>Nature Bank</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://afforestation.org/services/urban-farming" class="aff-mega-link">
+                                                <svg class="aff-mega-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M7 20h10"/><path d="M10 20c5.5-2.5.8-6.4 3-10"/><path d="M9.5 9.4c1.1.8 1.8 2.2 2.3 3.7-2 .4-3.5.4-4.8-.3-1.2-.6-2.3-1.9-3-4.2 2.8-.5 4.4 0 5.5.8z"/><path d="M14.1 6a7 7 0 0 0-1.1 4c1.9-.1 3.3-.6 4.3-1.4 1-1 1.6-2.3 1.7-4.6-2.7.1-4 1-4.9 2z"/></svg>
+                                                <span>Urban Farming &amp; Landscaping</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="aff-mega-divider" aria-hidden="true"></div>
+                                    <ul class="aff-mega-col">
+                                        <li>
+                                            <a href="https://afforestation.org/impact" class="aff-mega-link">
+                                                <svg class="aff-mega-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                                                <span>For Individuals</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://afforestation.org/grow-app" class="aff-mega-link">
+                                                <svg class="aff-mega-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/><path d="M12 18h.01"/></svg>
+                                                <span>Grow App</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://afforestation.org/plant" class="aff-mega-link">
+                                                <svg class="aff-mega-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M10 10v.2A3 3 0 0 1 8.9 16H5a3 3 0 0 1-1-5.7V10a3 3 0 0 1 6 0Z"/><path d="M7 16v6"/><path d="M13 19v3"/><path d="M12 19h8.3a1 1 0 0 0 .7-1.7L18 14h.3a1 1 0 0 0 .7-1.7L16 9h.2a1 1 0 0 0 .8-1.7L13 3l-1.4 1.5"/></svg>
+                                                <span>Plant Trees</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://afforestation.org/growcoin" class="aff-mega-link">
+                                                <span class="aff-growcoin-icon" aria-hidden="true"><span>A</span></span>
+                                                <span>Grow Coin</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://afforestation.org/impact" class="aff-mega-link">
+                                                <svg class="aff-mega-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83Z"/><path d="m22 17.65-9.17 4.16a2 2 0 0 1-1.66 0L2 17.65"/><path d="m22 12.65-9.17 4.16a2 2 0 0 1-1.66 0L2 12.65"/></svg>
+                                                <span>Track Impact</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <div class="aff-mega-divider" aria-hidden="true"></div>
+                                    <ul class="aff-mega-col">
+                                        <li>
+                                            <a href="https://afforestation.org/planting-partners" class="aff-mega-link">
+                                                <svg class="aff-mega-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2"/><path d="M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3"/><path d="M3 4h8"/></svg>
+                                                <span>For Planting Partner</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://afforestation.org/dashboard" class="aff-mega-link">
+                                                <svg class="aff-mega-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+                                                <span>Partner Dashboard</span>
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="https://afforestation.org/contact" class="aff-mega-link">
+                                                <svg class="aff-mega-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M22 12h-2.48a2 2 0 0 0-1.93 1.46l-2.35 8.36a.25.25 0 0 1-.48 0L9.24 2.18a.25.25 0 0 0-.48 0l-2.35 8.36A2 2 0 0 1 4.49 12H2"/></svg>
+                                                <span>Funding opportunities</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
                             </div>
                         </div>
-
-                        <!-- For Individuals Dropdown -->
-                        <div class="aff-dropdown">
-                            <button class="aff-nav-link aff-dropdown-toggle">
-                                For Individuals
-                                <svg class="aff-chevron" width="16" height="16" viewBox="0 0 24 24" fill="none"
-                                    stroke="currentColor" stroke-width="2">
-                                    <path d="M6 9l6 6 6-6" />
-                                </svg>
-                            </button>
-                            <div class="aff-dropdown-menu">
-                                <a href="https://afforestation.org/carbon-calculator" class="aff-dropdown-item">Carbon
-                                    Calculator</a>
-                                <a href="https://afforestation.org/plant" class="aff-dropdown-item">Plant Trees</a>
-                                <a href="https://afforestation.org/impact" class="aff-dropdown-item">Track Impact</a>
-                                <a href="https://afforestation.org/growcoin" class="aff-dropdown-item">GrowCoin</a>
-                                <a href="https://afforestation.org/services/urban-farming"
-                                    class="aff-dropdown-item">Urban Farming & Landscaping</a>
-                            </div>
-                        </div>
-
-                        <!-- Direct Links -->
-                        <a href="https://afforestation.org/grow-app" class="aff-nav-link">Grow App</a>
-                        <a href="https://afforestation.org/about" class="aff-nav-link">About Us</a>
-                        <a href="https://afforestation.org/contact" class="aff-nav-link">Contact</a>
-                        <a href="{{@site.url}}" class="aff-nav-link aff-nav-blog-active">Blog</a>
-                    </nav>
-
-                    <!-- Action Buttons -->
-                    <div class="aff-actions">
-                        <button class="gh-search aff-search-btn" aria-label="Search this site" data-ghost-search>
-                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
-                                stroke-width="2">
-                                <circle cx="11" cy="11" r="8" />
-                                <path d="M21 21l-4.35-4.35" />
-                            </svg>
-                        </button>
-                        <a href="https://afforestation.org/auth/signin" class="aff-btn-ghost">Sign In</a>
                     </div>
 
-                    <!-- Mobile Menu Button -->
-                    <button class="aff-mobile-toggle" aria-label="Toggle menu">
-                        <svg class="aff-menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <path d="M3 12h18M3 6h18M3 18h18" />
-                        </svg>
-                        <svg class="aff-close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none"
-                            stroke="currentColor" stroke-width="2">
-                            <path d="M18 6L6 18M6 6l12 12" />
-                        </svg>
-                    </button>
+                    <!-- Products dropdown -->
+                    <div class="aff-mega" data-mega="products">
+                        <button type="button" class="aff-nav-link aff-mega-toggle">Products</button>
+                        <div class="aff-mega-panel aff-mega-panel--products">
+                            <div class="aff-mega-panel-inner aff-mega-panel-inner--products">
+                                <ul class="aff-mega-col">
+                                    <li><a href="https://afforestation.org/carbon-calculator" class="aff-mega-text-link">Carbon Calculator</a></li>
+                                    <li><a href="https://afforestation.org/event-carbon-calculator" class="aff-mega-text-link">Event Carbon Calculator</a></li>
+                                    <li><a href="https://afforestation.org/tools/website-carbon" class="aff-mega-text-link">Website Carbon Audit</a></li>
+                                    <li><a href="https://afforestation.org/species" class="aff-mega-text-link">Tree Species Database</a></li>
+                                    <li><a href="https://afforestation.org/brands" class="aff-mega-text-link">Sustainable Brands</a></li>
+                                    <li><a href="https://afforestation.org/services/urban-farming" class="aff-mega-text-link">Urban Farming &amp; Landscaping</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://afforestation.org/about" class="aff-nav-link">About Us</a>
+                    <a href="{{@site.url}}" class="aff-nav-link aff-nav-active">Resources</a>
+                </nav>
+
+                <div class="aff-actions">
+                    <a href="https://afforestation.org/auth/signin" class="aff-btn-login">Log In</a>
+                    <a href="https://afforestation.org/auth" class="aff-btn-cta">Get Started</a>
                 </div>
+
+                <button type="button" class="aff-mobile-toggle" aria-label="Toggle menu" aria-expanded="false">
+                    <svg class="aff-menu-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M3 12h18M3 6h18M3 18h18" />
+                    </svg>
+                    <svg class="aff-close-icon" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true">
+                        <path d="M18 6L6 18M6 6l12 12" />
+                    </svg>
+                </button>
             </div>
 
-            <!-- Mobile Navigation -->
             <div class="aff-mobile-menu">
                 <div class="aff-mobile-menu-inner">
-                    <!-- Business Solutions -->
                     <div class="aff-mobile-section">
-                        <h3 class="aff-mobile-section-title">Business Solutions</h3>
+                        <h3 class="aff-mobile-section-title">Solutions</h3>
                         <a href="https://afforestation.org/for-business" class="aff-mobile-link">For Businesses</a>
-                        <a href="https://afforestation.org/for-business#small-midsize"
-                            class="aff-mobile-link">Small-Midsize</a>
-                        <a href="https://afforestation.org/enterprise" class="aff-mobile-link">Enterprise</a>
-                        <a href="https://afforestation.org/ecommerce-integrations" class="aff-mobile-link">E-commerce
-                            Integration</a>
-                        <a href="https://afforestation.org/white-label-api" class="aff-mobile-link">API Solutions</a>
-                        <a href="https://afforestation.org/nature-bank" class="aff-mobile-link">Nature Bank <span
-                                class="aff-tag">New</span></a>
-                        <a href="https://afforestation.org/services/urban-farming" class="aff-mobile-link">Urban Farming
-                            & Landscaping <span class="aff-tag">New</span></a>
-                    </div>
-
-                    <!-- For Individuals -->
-                    <div class="aff-mobile-section">
-                        <h3 class="aff-mobile-section-title">For Individuals</h3>
-                        <a href="https://afforestation.org/carbon-calculator" class="aff-mobile-link">Carbon
-                            Calculator</a>
+                        <a href="https://afforestation.org/for-business/growcoin" class="aff-mobile-link">GrowCoin for Business</a>
+                        <a href="https://afforestation.org/ecommerce-integrations" class="aff-mobile-link">E-commerce Integration</a>
+                        <a href="https://afforestation.org/carbon-counter" class="aff-mobile-link">Carbon counter logistic</a>
+                        <a href="https://afforestation.org/nature-bank" class="aff-mobile-link">Nature Bank</a>
+                        <a href="https://afforestation.org/services/urban-farming" class="aff-mobile-link">Urban Farming &amp; Landscaping</a>
+                        <a href="https://afforestation.org/impact" class="aff-mobile-link">For Individuals</a>
+                        <a href="https://afforestation.org/grow-app" class="aff-mobile-link">Grow App</a>
                         <a href="https://afforestation.org/plant" class="aff-mobile-link">Plant Trees</a>
+                        <a href="https://afforestation.org/growcoin" class="aff-mobile-link">Grow Coin</a>
                         <a href="https://afforestation.org/impact" class="aff-mobile-link">Track Impact</a>
-                        <a href="https://afforestation.org/growcoin" class="aff-mobile-link">GrowCoin</a>
-                        <a href="https://afforestation.org/services/urban-farming" class="aff-mobile-link">Urban Farming
-                            & Landscaping</a>
+                        <a href="https://afforestation.org/planting-partners" class="aff-mobile-link">For Planting Partner</a>
+                        <a href="https://afforestation.org/dashboard" class="aff-mobile-link">Partner Dashboard</a>
+                        <a href="https://afforestation.org/contact" class="aff-mobile-link">Funding opportunities</a>
                     </div>
 
-                    <!-- Other Links -->
+                    <div class="aff-mobile-section">
+                        <h3 class="aff-mobile-section-title">Products</h3>
+                        <a href="https://afforestation.org/carbon-calculator" class="aff-mobile-link">Carbon Calculator</a>
+                        <a href="https://afforestation.org/event-carbon-calculator" class="aff-mobile-link">Event Carbon Calculator</a>
+                        <a href="https://afforestation.org/tools/website-carbon" class="aff-mobile-link">Website Carbon Audit</a>
+                        <a href="https://afforestation.org/species" class="aff-mobile-link">Tree Species Database</a>
+                        <a href="https://afforestation.org/brands" class="aff-mobile-link">Sustainable Brands</a>
+                        <a href="https://afforestation.org/services/urban-farming" class="aff-mobile-link">Urban Farming &amp; Landscaping</a>
+                    </div>
+
                     <div class="aff-mobile-section aff-mobile-links">
-                        <a href="https://afforestation.org/grow-app" class="aff-mobile-nav-link">Grow App</a>
                         <a href="https://afforestation.org/about" class="aff-mobile-nav-link">About Us</a>
-                        <a href="https://afforestation.org/contact" class="aff-mobile-nav-link">Contact</a>
-                        <a href="{{@site.url}}" class="aff-mobile-nav-link aff-nav-blog-active">Blog</a>
+                        <a href="{{@site.url}}" class="aff-mobile-nav-link aff-nav-active">Resources</a>
                     </div>
 
-                    <!-- Mobile Actions -->
                     <div class="aff-mobile-actions">
-                        <a href="https://afforestation.org/carbon-credits" class="aff-btn-primary aff-btn-full">Offset
-                            Now</a>
-                        <a href="https://afforestation.org/auth/signin" class="aff-btn-outline aff-btn-full">Sign In</a>
+                        <a href="https://afforestation.org/auth/signin" class="aff-btn-login aff-btn-full">Log In</a>
+                        <a href="https://afforestation.org/auth" class="aff-btn-cta aff-btn-full">Get Started</a>
                     </div>
                 </div>
             </div>
